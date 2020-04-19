@@ -17,5 +17,10 @@ export default createMuiTheme({
         secondary: {
             main: `${arcOrange}`,
         }
+    },
+    typography: {
+        h3: {
+            fontWeight: 300
+        }
     }
 })
