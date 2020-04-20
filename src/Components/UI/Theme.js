@@ -19,8 +19,18 @@ export default createMuiTheme({
         }
     },
     typography: {
-        h3: {
-            fontWeight: 300
-        }
-    }
+        // extending custom variants
+        tab: {
+            fontFamily: "Raleway",
+            fontSize: "1rem",
+            fontWeight: 700,
+            textTransform: "none",
+        },
+        button: {
+            color: "#0b72b9",
+            fontSize: "1rem",
+            textTransform: "none"
+        },
+    },
+    
 })

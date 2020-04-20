@@ -1,6 +1,6 @@
 import React from "react";
-import PropTypes from 'prop-types';
-import { AppBar, Toolbar, Typography, Button, IconButton } from "@material-ui/core";
+import { AppBar, Toolbar, Tabs, Typography, Button } from "@material-ui/core";
+import Tab from "@material-ui/core/Tab";
 import { makeStyles } from "@material-ui/styles";
 import useScrollTrigger from '@material-ui/core/useScrollTrigger';
 
@@ -26,6 +26,22 @@ const useStyles = makeStyles(theme => ({
     },
     logo: {
         height: "7em"
+    },
+    tabContainer: {
+        marginLeft: "auto"
+    },
+    tab: {
+        //spreading
+        ...theme.typography.tab,
+        minWidth: 10,
+        marginLeft: "25px"
+    },
+    button: {
+        ...theme.typography.button,
+        height: "45px",
+        marginRight: "25px",
+        marginLeft: "50px",
+        borderRadius: "50px",
     }
 }));
 
@@ -41,6 +57,14 @@ export default function Header(props) {
                         {/* <Typography variant="h3">
                             Arc Development
                         </Typography> */}
+                        <Tabs className={classes.tabContainer}>
+                            <Tab className={classes.tab} label="Home" />
+                            <Tab className={classes.tab} label="Services" />
+                            <Tab className={classes.tab} label="The Revolution" />
+                            <Tab className={classes.tab} label="About Us" />
+                            <Tab className={classes.tab} label="Contact Us" />
+                        </Tabs>
+                        <Button className={classes.button} variant="contained" color="secondary">Estimates</Button>
                     </Toolbar>
                 </AppBar>
             </ElevationScroll>
